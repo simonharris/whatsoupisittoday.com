@@ -1,0 +1,21 @@
+{% load formatting %}
+
+{% url n_pret_today as pret_today %}
+{% url n_pret_tomorrow as pret_tomorrow %}
+{% url n_eat_today as eat_today %}
+{% url n_eat_tomorrow as eat_tomorrow %}
+{% url n_tossed_today as tossed_today %}
+{% url n_tossed_tomorrow as tossed_tomorrow %}
+{% url n_leon_today as leon_today %}
+{% url n_pages_about as pages_about %}
+
+<nav id="primary">
+    <a{% active request pret_today %} href="{{ pret_today }}">Pret Today</a> |
+    <a{% active request pret_tomorrow %} href="{{ pret_tomorrow }}">Pret Tomorrow</a> |
+    <a{% active request eat_today %} href="{{ eat_today }}">Eat Today</a> |
+    <a{% active request eat_tomorrow %} href="{{ eat_tomorrow }}">Eat Tomorrow</a> |
+    <a{% active request tossed_today %} href="{{ tossed_today }}">Tossed Today</a> |
+    <a{% active request tossed_tomorrow %} href="{{ tossed_tomorrow }}">Tossed Tomorrow</a> |
+    <a{% active request leon_today %} href="{{ leon_today }}">Leon Today</a> |
+    <small><a{% active request pages_about %} href="{{ pages_about }}">About this site</a></small>
+</nav>

@@ -1,0 +1,71 @@
+html, body, #container {
+	height: 95%;
+	margin: 0; padding: 0;
+}
+
+body      {   background-color: #840215;   color: white;   }
+body.eat {    background-color: #DDBE89;   color: #693828; }
+body.tossed { background-color: #EA447E;   color: white;   }
+body.leon {   background-color: #D5BB88;   color: #0E456C; }
+body.pages {  background-color: OliveDrab; color: white;   }
+
+#main {
+	text-align: center;
+	font-size: 5em; 
+	line-height: 130%;
+	width: 99%;
+	margin-top: 8%;
+	margin-bottom: 5%;
+}
+
+nav#primary {
+	position: absolute; 
+	width: 99%;
+	text-align: center;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 0.8em;
+	padding: 0.2em;
+	color: white;
+}
+
+nav#primary a {
+	color: white;
+}
+
+body.eat nav#primary, body.eat nav#primary a  { color: #693828; }
+body.leon nav#primary, body.leon nav#primary a { color: #0E456C; }
+
+nav#primary a.current {
+	text-decoration: none;
+}
+
+#about {
+	font-family: helvetica, arial, sans-serif;
+	width: 70%;
+	position: absolute;
+	top: 5%;
+	left: 15%;
+}
+
+#about h2, #about h3 {
+	margin-top: 2em;
+}
+
+#about dt {
+	font-weight: bold;
+}
+
+#about a {
+	color: white;
+}
+
+#promo {
+	font-family: helvetica, arial, sans-serif;
+	width: 99%;
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+#promo a { color: white; }
+body.eat #promo a { color: #693828; }
+body.leon #promo a { color: #0E456C; }
