@@ -10,12 +10,12 @@ Run: by hand, as and when
 outfile = '/tmp/tossed.pkl';
 
 
-# update 20111013
+# update 20120612
 souplist = [
-        ['Skinny Minestrone', 'Malaysian Chicken', 'Tomato & Basil'],
-        ['Pumpkin & Lentil Hotpot', 'Chilli Chicken', 'Tomato & Basil'],
-        ['Mamma\'s Chicken', 'Sweet Potato, Coconut & Coriander', 'Tomato & Basil'],
-        ['Smokey Bacon & Lentil', 'Leek & Potato', 'Tomato & Basil'],
+        ['Chickpea & Spinach Dhal', 'Malaysian Chicken', 'Tomato & Basil'],
+        ['Sweet Potato, Coconut & Coriander ', 'Summer Chicken', 'Tomato & Basil'],
+        ['Pea & Mint', 'Chilli Chicken', 'Tomato & Basil'],
+        ['Minestrone', 'Indonesian Chicken Noodle', 'Tomato & Basil'],
         ['Pick of the Week', 'Tomato & Basil'],
 ]
 
