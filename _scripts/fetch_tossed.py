@@ -22,11 +22,11 @@ outfile = '/tmp/tossed.pkl';
 
 # update 20120924
 souplist = [
-        ['Malaysian Chicken', 'Tomato & Basil'],
-        ['Malaysian Chicken', 'Tomato & Basil'],
-        ['Malaysian Chicken', 'Tomato & Basil'],
-        ['Malaysian Chicken', 'Tomato & Basil'],
-        ['Malaysian Chicken', 'Tomato & Basil'],
+        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
 ]
 
 output = open(outfile, 'wb')
