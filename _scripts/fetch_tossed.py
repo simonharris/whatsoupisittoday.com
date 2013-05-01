@@ -21,12 +21,21 @@ outfile = '/tmp/tossed.pkl';
 
 
 # update 20120924
+#souplist = [
+#        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+#        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+#        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+#        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+#        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+#]
+
+# update 20130401
 souplist = [
-        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
-        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
-        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
-        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
-        ['Malaysian Chicken', 'Tomato & Basil', 'Classic Chicken', 'Lentil Dhal'],
+	['100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken','150 Calorie Pea and Mint','150 Calorie Summer Chicken','Super Skinny Miso'],
+	['100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken','150 Calorie Pea and Mint','150 Calorie Summer Chicken','Super Skinny Miso'],
+	['100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken','150 Calorie Pea and Mint','150 Calorie Summer Chicken','Super Skinny Miso'],
+	['100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken','150 Calorie Pea and Mint','150 Calorie Summer Chicken','Super Skinny Miso'],
+	['100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken','150 Calorie Pea and Mint','150 Calorie Summer Chicken','Super Skinny Miso']
 ]
 
 output = open(outfile, 'wb')
