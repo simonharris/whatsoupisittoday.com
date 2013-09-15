@@ -1,7 +1,9 @@
-from lxml.html import parse
+from lxml.html import etree 
 from pprint import pprint
 import pickle
 import re
+import urllib2
+from StringIO import StringIO 
 
 
 """
@@ -20,7 +22,12 @@ def fix_text(astr):
 	return astr
 
 
-doc = parse(soupurl)
+html = urllib2.urlopen(soupurl).read()
+html = html.replace('<br />', '')
+
+parser = etree.HTMLParser()
+doc    = etree.parse(StringIO(html), parser)
+
 elements = doc.xpath('//td[@valign="middle" and @align="center"]')
 
 allsoups = [elem.text for elem in elements]
