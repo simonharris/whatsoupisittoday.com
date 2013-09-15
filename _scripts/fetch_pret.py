@@ -26,7 +26,7 @@ elements = doc.xpath('//td[@valign="middle" and @align="center"]')
 allsoups = [elem.text for elem in elements]
 allsoups = map(fix_text, allsoups)
 
-pprint(allsoups)
+#pprint(allsoups)
 
 souplist = [
 	[allsoups[0], allsoups[1]],
