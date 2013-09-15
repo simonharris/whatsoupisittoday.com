@@ -21,6 +21,8 @@ urlpatterns = patterns('',
     url(r'^eat/tomorrow/?$', 'listings.views.show_soup', {'which':'eat', 'tomorrow':True}, name='n_eat_tomorrow'),
     url(r'^tossed/?$', 'listings.views.show_soup', {'which':'tossed', 'tomorrow':False}, name='n_tossed_today'),
     url(r'^tossed/tomorrow/?$', 'listings.views.show_soup', {'which':'tossed', 'tomorrow':True}, name='n_tossed_tomorrow'),
+    url(r'^abokado/?$', 'listings.views.show_soup', {'which':'abokado', 'tomorrow':False}, name='n_abokado_today'),
+    url(r'^abokado/tomorrow/?$', 'listings.views.show_soup', {'which':'abokado', 'tomorrow':True}, name='n_abokado_tomorrow'),
     url(r'^leon/?$', 'listings.views.leon', name='n_leon_today'),
     url(r'^about/?$', 'pages.views.about', name='n_pages_about'),
 )

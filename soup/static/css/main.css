@@ -3,11 +3,12 @@ html, body, #container {
 	margin: 0; padding: 0;
 }
 
-body      {   background-color: #840215;   color: white;   }
-body.eat {    background-color: #DDBE89;   color: #693828; }
-body.tossed { background-color: #EA447E;   color: white;   }
-body.leon {   background-color: #D5BB88;   color: #0E456C; }
-body.pages {  background-color: OliveDrab; color: white;   }
+body      {    background-color: #840215;   color: white;   }
+body.eat {     background-color: #DDBE89;   color: #693828; }
+body.tossed {  background-color: #EA447E;   color: white;   }
+body.leon {    background-color: #D5BB88;   color: #0E456C; }
+body.abokado { background-color: #9F6614;   color: white;   }
+body.pages {   background-color: OliveDrab; color: white;   }
 
 #main {
 	text-align: center;
