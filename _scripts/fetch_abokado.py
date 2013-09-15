@@ -14,18 +14,24 @@ soupurl = 'http://abokado.com/menu/soups-and-abowlagos/'
 
 def fix_text(astr):
 	"""Remove undesirable characters and strings"""
-	astr = astr.replace('(v)', '').replace('(ve)', '').strip()
+	astr = astr.replace('(v)', '').replace('(ve)', '').replace('(med)', '').replace('(lrg)', '').strip()
 	return astr
 
 
 doc = parse(soupurl)
-elements = doc.xpath('//section[@class="post-content"]/p[position()>3]')
+#elements = doc.xpath('//section[@class="post-content"]/p[position()>3]')
+elements = doc.xpath('//div[@class="left"]/header/h1')
 
 souplist = [elem.text for elem in elements]
 souplist = map(fix_text, souplist)
+souplist = set(souplist)
 
-pprint(souplist)
+#pprint(souplist)
+
+allweek = [souplist,souplist,souplist,souplist,souplist]
+
+#pprint(allweek)
 
 output = open(outfile, 'wb')
-pickle.dump(souplist, output, -1)
+pickle.dump(allweek, output, -1)
 output.close()
