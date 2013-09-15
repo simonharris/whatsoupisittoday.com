@@ -15,6 +15,7 @@ soupurl = 'http://www.eatserver.co.uk/editor/menuProvider.php';
 def fix_text(astr) :
 	astr = astr.strip()
 	astr = astr.replace('has nuts in it', '')
+	astr = astr.replace('(less than 5% fat)', '')
 	astr = re.sub('/NEW /', '', astr)
 	astr = re.sub('/ - Back by popular demand!$/', '', astr);
 	astr = astr.strip()
