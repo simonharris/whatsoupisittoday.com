@@ -15,14 +15,15 @@ soupurl = 'http://abokado.com/menu/soups-and-abowlagos/'
 def fix_text(astr):
 	"""Remove undesirable characters and strings"""
 	astr = astr.replace('(v)', '').replace('(ve)', '').replace('(med)', '').replace('(lrg)', '').strip()
+	astr = astr.replace('(wheat free)', '').strip()
+	astr = astr.replace(' Soup', '').strip()
 	return astr
 
 
 doc = parse(soupurl)
-#elements = doc.xpath('//section[@class="post-content"]/p[position()>3]')
 elements = doc.xpath('//div[@class="left"]/header/h1')
 
-souplist = [elem.text for elem in elements]
+souplist = [elem.text for elem in elements if ("Soup" in elem.text)]
 souplist = map(fix_text, souplist)
 souplist = set(souplist)
 
