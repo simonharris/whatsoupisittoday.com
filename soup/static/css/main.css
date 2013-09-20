@@ -6,6 +6,7 @@ body      {    background-color: #840215;   color: white;   }
 body.eat {     background-color: #DDBE89;   color: #693828; }
 body.tossed {  background-color: #EA447E;   color: white;   }
 body.leon {    background-color: #D5BB88;   color: #0E456C; }
+body.nusa {    background-color: #F8981D;   color: white; }
 body.abokado { background-color: #9F6614;   color: white;   }
 body.pages {   background-color: OliveDrab; color: white;   }
 
@@ -25,6 +26,7 @@ nav#primary {
 	text-align: center;
 	font-family: helvetica, arial, sans-serif;
 	font-size: 0.8em;
+	font-weight: bold;
 	padding: 0.2em;
 	color: white;
 }

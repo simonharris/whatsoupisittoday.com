@@ -18,9 +18,10 @@ def show_soup(request, which, tomorrow):
     params = {'soup': souplist, 'request':request, 'bodyclass':which}
     return render_to_response('listings/index.html', params)
 
-def leon(request):
-    data_today = get_data('leon')
-    params = {'soup': data_today, 'request':request, 'bodyclass':'leon'}
+
+def show_soup_single(request, which):
+    data_today = get_data(which)
+    params = {'soup': data_today, 'request':request, 'bodyclass':which}
     return render_to_response('listings/index.html', params)
 
 
