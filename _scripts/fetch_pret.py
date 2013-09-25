@@ -28,19 +28,20 @@ html = html.replace('<br />', '')
 parser = etree.HTMLParser()
 doc    = etree.parse(StringIO(html), parser)
 
-elements = doc.xpath('//td[@valign="middle" and @align="center"]')
+soupnames = doc.xpath('//div[@class="soup_details_hidden"]//img[contains(@src, \'souptitle\')]//@alt')
 
-allsoups = [elem.text for elem in elements]
-allsoups = map(fix_text, allsoups)
+#pprint(soupnames)
+
+allsoups = map(fix_text, soupnames)
 
 #pprint(allsoups)
 
 souplist = [
-	[allsoups[0], allsoups[1]],
-	[allsoups[2], allsoups[3]],
-	[allsoups[4], allsoups[5]],
-	[allsoups[6], allsoups[7]],
-	[allsoups[8], allsoups[9]],
+	[allsoups[0], allsoups[1], allsoups[2]],
+	[allsoups[3], allsoups[4], allsoups[5]],
+	[allsoups[6], allsoups[7], allsoups[8]],
+	[allsoups[9], allsoups[10], allsoups[11]],
+	[allsoups[12], allsoups[13], allsoups[14]],
 ]
 
 output = open(outfile, 'wb')
