@@ -4,12 +4,14 @@
 {% url n_pret_tomorrow as pret_tomorrow %}
 {% url n_eat_today as eat_today %}
 {% url n_eat_tomorrow as eat_tomorrow %}
-{% url n_tossed_today as tossed_today %}
-{% url n_tossed_tomorrow as tossed_tomorrow %}
 {% url n_abokado_today as abokado_today %}
 {% url n_abokado_tomorrow as abokado_tomorrow %}
 {% url n_leon_today as leon_today %}
 {% url n_nusa_today as nusa_today %}
+{% url n_pure_today as pure_today %}
+{% url n_pure_tomorrow as pure_tomorrow %}
+{% url n_tossed_today as tossed_today %}
+{% url n_tossed_tomorrow as tossed_tomorrow %}
 {% url n_pages_about as pages_about %}
 
 <nav id="primary">
@@ -17,10 +19,12 @@
     <a{% active request pret_tomorrow %} href="{{ pret_tomorrow }}" title="Pret Tomorrow">Pret Tomorrow</a> |
     <a{% active request eat_today %} href="{{ eat_today }}" title="EAT Today">EAT Today</a> |
     <a{% active request eat_tomorrow %} href="{{ eat_tomorrow }}" title="EAT Tomorrow">EAT Tomorrow</a> |
-    <a{% active request tossed_today %} href="{{ tossed_today }}" title="Tossed All Week">Tossed</a> |
-    <!-- a{% active request tossed_tomorrow %} href="{{ tossed_tomorrow }}">Tossed Tomorrow</a> | -->
     <a{% active request abokado_today %} href="{{ abokado_today }}" title="Abokado All Week">Abokado</a> |
-    <!-- a{% active request abokado_tomorrow %} href="{{ abokado_tomorrow }}">Abokado Tomorrow</a> | -->
-    <a{% active request leon_today %} href="{{ leon_today }}" title="Leon All Week">Leon</a> | 
-    <a{% active request nusa_today %} href="{{ nusa_today }}" title="Nusa Today">Nusa</a> 
+    <a{% active request leon_today %} href="{{ leon_today }}" title="Leon All Week">Leon</a> |
+    <a{% active request nusa_today %} href="{{ nusa_today }}" title="Nusa Today">Nusa</a> |
+    <a{% active request pure_today %} href="{{ pure_today }}" title="Pure Today">Pure Today</a> |
+    <a{% active request pure_tomorrow %} href="{{ pure_tomorrow }}" title="Pure Tomorrow">Pure Tomorrow</a> |
+    <a{% active request tossed_today %} href="{{ tossed_today }}" title="Tossed All Week">Tossed</a>
 </nav>
+
+<p>{{ debug }}</p>

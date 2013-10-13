@@ -3,16 +3,17 @@ html, body, #container {
 }
 
 body      {    background-color: #840215;   color: white;   }
-body.eat {     background-color: #DDBE89;   color: #693828; }
-body.tossed {  background-color: #EA447E;   color: white;   }
-body.leon {    background-color: #D5BB88;   color: #0E456C; }
-body.nusa {    background-color: #F8981D;   color: white; }
 body.abokado { background-color: #9F6614;   color: white;   }
+body.eat {     background-color: #DDBE89;   color: #693828; }
+body.leon {    background-color: #D5BB88;   color: #0E456C; }
+body.nusa {    background-color: #F8981D;   color: white;   }
+body.pure {    background-color: #F7F4E3;   color: #6C5A51; }
+body.tossed {  background-color: #EA447E;   color: white;   }
 body.pages {   background-color: OliveDrab; color: white;   }
 
 #main {
 	text-align: center;
-	font-size: 5em; 
+	font-size: 5em;
 	line-height: 130%;
 	width: 99%;
 	margin-top: 8%;
@@ -21,7 +22,7 @@ body.pages {   background-color: OliveDrab; color: white;   }
 
 nav#primary {
 	position: absolute;
-	top: 4px; 
+	top: 4px;
 	width: 99%;
 	text-align: center;
 	font-family: helvetica, arial, sans-serif;
@@ -37,6 +38,7 @@ nav#primary a {
 
 body.eat nav#primary, body.eat nav#primary a  { color: #693828; }
 body.leon nav#primary, body.leon nav#primary a { color: #0E456C; }
+body.pure nav#primary, body.pure nav#primary a { color: #6C5A51; }
 
 nav#primary a.current {
 	text-decoration: none;
@@ -72,3 +74,5 @@ nav#primary a.current {
 #promo a { color: white; }
 body.eat #promo a { color: #693828; }
 body.leon #promo a { color: #0E456C; }
+body.pure #promo a { color: #0E456C; }
+body.pure #promo a { color: #6C5A51; }
