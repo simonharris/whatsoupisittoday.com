@@ -15,6 +15,7 @@ soupurl = 'http://abokado.com/menu/soups-and-abowlagos/'
 def fix_text(astr):
 	"""Remove undesirable characters and strings"""
 	astr = astr.replace('(v)', '').replace('(ve)', '').replace('(med)', '').replace('(lrg)', '').strip()
+	astr = astr.replace('(gf)', '').strip()
 	astr = astr.replace('(wheat free)', '').strip()
 	astr = astr.replace(' Soup', '').strip()
 	return astr
