@@ -1,0 +1,12 @@
+[
+    {"key": "cannon-street",            "name": "Cannon Street"},
+    {"key": "clerkenwell",              "name": "Clerkenwell"},
+    {"key": "covent-garden",            "name": "Covent Garden"},
+    {"key": "curzon-street",            "name": "Curzon Street"},
+    {"key": "great-portland-street",    "name": "Great Portland Street"},
+    {"key": "hanover-street",           "name": "Hanover Street"},
+    {"key": "luton-airport",            "name": "Luton Airport"},
+    {"key": "st-pancras-international", "name": "St. Pancras International"},
+    {"key": "waterloo-station",         "name": "Waterloo Station"},
+    {"key": "westfield-white-city",     "name": "Westfield White City"}
+]
