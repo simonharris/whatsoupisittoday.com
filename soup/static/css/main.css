@@ -4,6 +4,7 @@ html, body, #container {
 
 body      {    background-color: #840215;   color: white;   }
 body.abokado { background-color: #9F6614;   color: white;   }
+body.benugo {  background-color: #E0DEDF;   color: #242424; }
 body.eat {     background-color: #DDBE89;   color: #693828; }
 body.leon {    background-color: #D5BB88;   color: #0E456C; }
 body.nusa {    background-color: #F8981D;   color: white;   }
@@ -14,10 +15,27 @@ body.pages {   background-color: OliveDrab; color: white;   }
 #main {
 	text-align: center;
 	font-size: 5em;
-	line-height: 130%;
 	width: 99%;
 	margin-top: 8%;
 	margin-bottom: 5%;
+}
+
+#main.shop_all {
+	line-height: 130%;
+}
+
+#main .shop_branch {
+	margin: 0 0 4% 0;
+	font-size: 45%;
+}
+
+#main .shop_branch h3 {
+	margin: 0px;
+	padding: 0px;
+}
+
+#main .shop_branch p {
+	margin: 0 0 4% 0;
 }
 
 nav#primary {
@@ -36,6 +54,7 @@ nav#primary a {
 	color: white;
 }
 
+body.benugo nav#primary, body.benugo nav#primary a  { color: #242424; }
 body.eat nav#primary, body.eat nav#primary a  { color: #693828; }
 body.leon nav#primary, body.leon nav#primary a { color: #0E456C; }
 body.pure nav#primary, body.pure nav#primary a { color: #6C5A51; }
@@ -72,6 +91,7 @@ nav#primary a.current {
 }
 
 #promo a { color: white; }
+body.benugo #promo a { color: #242424; }
 body.eat #promo a { color: #693828; }
 body.leon #promo a { color: #0E456C; }
 body.pure #promo a { color: #0E456C; }
