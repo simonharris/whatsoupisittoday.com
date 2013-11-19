@@ -13,6 +13,7 @@ body.tossed {  background-color: #EA447E;   color: white;   }
 body.pages {   background-color: OliveDrab; color: white;   }
 
 #main {
+	font-family: "Times New Roman", serif;
 	text-align: center;
 	font-size: 5em;
 	width: 99%;
