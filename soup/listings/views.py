@@ -3,6 +3,7 @@ from django.conf import settings
 import pickle
 import json
 from datetime import date, timedelta
+from titlecase import titlecase
 
 
 def show_soup(request, which, tomorrow):
@@ -34,13 +35,20 @@ def show_benugo(request, which, tomorrow):
     soupviewdata = []
 
     for shop in shops_list:
+
+        soup_list = map(titlecase, sorted(data_today[shop['key']]))
+
+        # e.g. Hanover Street
+        if len(soup_list) == 0:
+            soup_list.append('Coming Soon')
+
         shopdata = {
             'name': shop['name'],
-            'soups': data_today[shop['key']]
+            'soups': soup_list
         }
         soupviewdata.append(shopdata)
 
-    params = {'benugo_list': soupviewdata, 'request': request, 'bodyclass': 'benugo'}
+    params = {'branch_list': soupviewdata, 'request': request, 'bodyclass': 'benugo'}
     return render_to_response('listings/multibranch.html', params)
 
 

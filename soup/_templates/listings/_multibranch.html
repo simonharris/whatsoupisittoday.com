@@ -1,30 +1,15 @@
-{% load formatting %}
-
 <div id="container">
     <div id="main">
-
-
-    {% for shop in benugo_list %}
-
-    <div class="shop_branch">
-
-        <h3>{{ shop.name }}</h3>
-
-        <p>{{ shop.soups|join:", " }}</p>
-
-        {% if not forloop.last %}<p>&#9832;</p>{% endif %}
-
-    </div>
+    {% for branch in branch_list %}
+        <div class="shop_branch">
+            <h3>{{ branch.name }}</h3>
+            <p>{{ branch.soups|join:"<br/>" }}</p>
+            {% if not forloop.last %}<p>&#9832;</p>{% endif %}
+        </div>
     {% endfor %}
-
-
-
-
-
     </div>
 
     <div id="promo">
        <p><small><a href="{{ pages_about }}">About this site</a></small></p>
     </div>
-
 </div>
