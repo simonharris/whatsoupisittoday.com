@@ -39,14 +39,12 @@ def show_benugo(request, which, tomorrow):
         soup_list = map(titlecase, sorted(data_today[shop['key']]))
 
         # e.g. Hanover Street
-        if len(soup_list) == 0:
-            soup_list.append('Coming Soon')
-
-        shopdata = {
-            'name': shop['name'],
-            'soups': soup_list
-        }
-        soupviewdata.append(shopdata)
+        if len(soup_list) > 0:
+            shopdata = {
+                'name': shop['name'],
+                'soups': soup_list
+            }
+            soupviewdata.append(shopdata)
 
     params = {'branch_list': soupviewdata, 'request': request, 'bodyclass': 'benugo'}
     return render_to_response('listings/multibranch.html', params)
