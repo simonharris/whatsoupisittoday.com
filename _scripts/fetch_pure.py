@@ -17,7 +17,7 @@ outfile = '/tmp/pure.pkl';
 souplist = {
 	'even':[
 		['Spiced Carrot', 'Tomato & Charred Red Onion', 'Siam Chicken'],
-		['Leek & Potato', 'Thai green lentil, Spinach & Coconut', 'Chicken Sambar Dahl'],
+		['Leek & Potato', 'Thai Green Lentil, Spinach & Coconut', 'Chicken Sambar Dahl'],
 		['Winter Chicken Noodle', 'Portobello Mushroom with Thyme', 'Lakeland Beef with Potato'],
 		['Tomato & Basil', 'Moroccan Sweet Potato & Chickpea', 'Bean & Bacon Broth'],
 		['Winter Vegetable & Barley', 'Tomato & Sweet Red Pepper', 'Tuscan Sausage Broth']
