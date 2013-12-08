@@ -2,7 +2,7 @@ from lxml.html import parse
 from pprint import pprint
 import pickle
 import json
-#import re
+import os 
 
 
 """
@@ -25,7 +25,10 @@ def fix_text(astr):
 
 souplist = {}
 
-shops = json.load(open("../_data/shops_benugo.json"))
+
+mypath = os.path.dirname(os.path.realpath(__file__))
+
+shops = json.load(open(mypath + "/../_data/shops_benugo.json"))
 
 #pprint(shops)
 
