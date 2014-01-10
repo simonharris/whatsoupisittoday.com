@@ -11,11 +11,11 @@ outfile = '/tmp/tossed.pkl';
 
 # update 20130915
 souplist = [
-	['Low GI Minestrone', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken'],
-	['Low GI Minestrone', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken'],
-	['Low GI Minestrone', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken'],
-	['Low GI Minestrone', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken'],
-	['Low GI Minestrone', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken']
+	['Low GI Minestrone', '100 Calorie Chicken Noodle', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken'],
+	['Low GI Minestrone', '100 Calorie Chicken Noodle', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken'],
+	['Low GI Minestrone', '100 Calorie Chicken Noodle', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken'],
+	['Low GI Minestrone', '100 Calorie Chicken Noodle', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken'],
+	['Low GI Minestrone', '100 Calorie Chicken Noodle', '100 Calorie Tomato and Basil','100 Calorie Malaysian Chicken']
 ]
 
 output = open(outfile, 'wb')
