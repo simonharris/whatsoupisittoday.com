@@ -2,15 +2,16 @@ html, body, #container {
 	margin: 0; padding: 0;
 }
 
-body      {    background-color: #840215;   color: white;   }
-body.abokado { background-color: #9F6614;   color: white;   }
-body.benugo {  background-color: #E0DEDF;   color: #242424; }
-body.eat {     background-color: #DDBE89;   color: #693828; }
-body.leon {    background-color: #D5BB88;   color: #0E456C; }
-body.nusa {    background-color: #F8981D;   color: white;   }
-body.pure {    background-color: #F7F4E3;   color: #6C5A51; }
-body.tossed {  background-color: #EA447E;   color: white;   }
-body.pages {   background-color: OliveDrab; color: white;   }
+body      {       background-color: #840215;   color: white;   }
+body.abokado {    background-color: #9F6614;   color: white;   }
+body.apostrophe { background-color: #F2F2EF;   color: #E6007E; }
+body.benugo {     background-color: #E0DEDF;   color: #242424; }
+body.eat {        background-color: #DDBE89;   color: #693828; }
+body.leon {       background-color: #D5BB88;   color: #0E456C; }
+body.nusa {       background-color: #F8981D;   color: white;   }
+body.pure {       background-color: #F7F4E3;   color: #6C5A51; }
+body.tossed {     background-color: #EA447E;   color: white;   }
+body.pages {      background-color: OliveDrab; color: white;   }
 
 #main {
 	font-family: "Times New Roman", serif;
@@ -55,6 +56,7 @@ nav#primary a {
 	color: white;
 }
 
+body.apostrophe nav#primary, body.apostrophe nav#primary a  { color: #E6007E; }
 body.benugo nav#primary, body.benugo nav#primary a  { color: #242424; }
 body.eat nav#primary, body.eat nav#primary a  { color: #693828; }
 body.leon nav#primary, body.leon nav#primary a { color: #0E456C; }
@@ -92,6 +94,7 @@ nav#primary a.current {
 }
 
 #promo a { color: white; }
+body.apostrophe #promo a { color: #E6007E; }
 body.benugo #promo a { color: #242424; }
 body.eat #promo a { color: #693828; }
 body.leon #promo a { color: #0E456C; }

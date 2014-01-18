@@ -28,9 +28,9 @@ def show_soup_single(request, which):
     return render_to_response('listings/index.html', params)
 
 
-def show_benugo(request, which, tomorrow):
-    data_today = get_data('benugo')
-    shops_list = json.load(open(settings.DATA_ROOT + "/shops_benugo.json"))
+def show_soup_multibranch(request, which, tomorrow):
+    data_today = get_data(which)
+    shops_list = json.load(open(settings.DATA_ROOT + "/shops_" + which + ".json"))
 
     soupviewdata = []
 
@@ -38,7 +38,6 @@ def show_benugo(request, which, tomorrow):
 
         soup_list = map(titlecase, sorted(data_today[shop['key']]))
 
-        # e.g. Hanover Street
         if len(soup_list) > 0:
             shopdata = {
                 'name': shop['name'],
@@ -46,7 +45,7 @@ def show_benugo(request, which, tomorrow):
             }
             soupviewdata.append(shopdata)
 
-    params = {'branch_list': soupviewdata, 'request': request, 'bodyclass': 'benugo'}
+    params = {'branch_list': soupviewdata, 'request': request, 'bodyclass': which}
     return render_to_response('listings/multibranch.html', params)
 
 
