@@ -7,6 +7,6 @@
     {"key": "hanover-street",           "name": "Hanover Street"},
     {"key": "luton-airport",            "name": "Luton Airport"},
     {"key": "st-pancras-international", "name": "St. Pancras International"},
-    {"key": "waterloo-station",         "name": "Waterloo Station"},
-    {"key": "westfield-white-city",     "name": "Westfield White City"}
+    {"key": "victoria",                 "name": "Victoria"},
+    {"key": "waterloo-station",         "name": "Waterloo Station"}
 ]
