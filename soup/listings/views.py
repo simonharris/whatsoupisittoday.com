@@ -36,14 +36,18 @@ def show_soup_multibranch(request, which, tomorrow):
 
     for shop in shops_list:
 
-        soup_list = map(titlecase, sorted(data_today[shop['key']]))
+        try:
+            soup_list = map(titlecase, sorted(data_today[shop['key']]))
 
-        if len(soup_list) > 0:
-            shopdata = {
-                'name': shop['name'],
-                'soups': soup_list
-            }
-            soupviewdata.append(shopdata)
+            if len(soup_list) > 0:
+                shopdata = {
+                    'name': shop['name'],
+                    'soups': soup_list
+                }
+                soupviewdata.append(shopdata)
+
+        except Exception:
+            pass
 
     params = {'branch_list': soupviewdata, 'request': request, 'bodyclass': which}
     return render_to_response('listings/multibranch.html', params)

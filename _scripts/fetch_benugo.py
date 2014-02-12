@@ -2,7 +2,7 @@ from lxml.html import parse
 from pprint import pprint
 import pickle
 import json
-import os 
+import os
 
 
 """
@@ -36,17 +36,23 @@ for shop in shops:
 
 	shopurl = soupurl + shop['key']
 	print "Reading", shopurl
-	doc = parse(shopurl)
 
-	#<span class='special-title'>
+	try:
+		doc = parse(shopurl)
 
-	elements = doc.xpath("//span[@class='special-title']")
-	pprint(elements)
+		#<span class='special-title'>
 
-	roughlist = [elem.text for elem in elements if ("SOUP" in elem.text)]
-	roughlist = map(fix_text, roughlist)
+		elements = doc.xpath("//span[@class='special-title']")
+		pprint(elements)
 
-	souplist[shop['key']] = roughlist #['Chicken & Mushroom', 'Vegetarian Gruel']
+		roughlist = [elem.text for elem in elements if ("SOUP" in elem.text)]
+		roughlist = map(fix_text, roughlist)
+
+	# e.g. 404
+	except IOError:
+		roughlist = ['Currently Unavailable']
+
+	souplist[shop['key']] = roughlist
 
 
 pprint(souplist)
