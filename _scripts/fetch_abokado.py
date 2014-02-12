@@ -10,21 +10,22 @@ Run: weekly, early Monday morning
 """
 
 outfile = '/tmp/abokado.pkl';
-soupurl = 'http://abokado.com/menu/soups-and-abowlagos/'
+soupurl = 'http://abokado.com/menu/soups-hot-pots/'
 
 def fix_text(astr):
 	"""Remove undesirable characters and strings"""
 	astr = astr.replace('(v)', '').replace('(ve)', '').replace('(med)', '').replace('(lrg)', '').strip()
 	astr = astr.replace('(gf)', '').strip()
+	astr = astr.replace('Med/Lrg', '').strip()
 	astr = astr.replace('(wheat free)', '').strip()
 	astr = astr.replace(' Soup', '').strip()
 	return astr
 
 
 doc = parse(soupurl)
-elements = doc.xpath('//div[@class="left"]/header/h1')
+elements = doc.xpath('//h2[text()="Soups"]/following-sibling::ul[1]/li/div[@class="left"]/header/h1')
 
-souplist = [elem.text for elem in elements if ("Soup" in elem.text)]
+souplist = [elem.text for elem in elements]
 souplist = map(fix_text, souplist)
 souplist = set(souplist)
 
