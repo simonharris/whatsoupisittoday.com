@@ -1,20 +1,20 @@
 {% load formatting %}
 
-{% url n_pret_today as pret_today %}
-{% url n_pret_tomorrow as pret_tomorrow %}
-{% url n_eat_today as eat_today %}
-{% url n_eat_tomorrow as eat_tomorrow %}
-{% url n_abokado_today as abokado_today %}
-{% url n_abokado_tomorrow as abokado_tomorrow %}
-{% url n_apostrophe_today as apostrophe_today %}
-{% url n_benugo_today as benugo_today %}
-{% url n_leon_today as leon_today %}
-{% url n_nusa_today as nusa_today %}
-{% url n_pure_today as pure_today %}
-{% url n_pure_tomorrow as pure_tomorrow %}
-{% url n_tossed_today as tossed_today %}
-{% url n_tossed_tomorrow as tossed_tomorrow %}
-{% url n_pages_about as pages_about %}
+{% url "n_pret_today" as pret_today %}
+{% url "n_pret_tomorrow" as pret_tomorrow %}
+{% url "n_eat_today" as eat_today %}
+{% url "n_eat_tomorrow" as eat_tomorrow %}
+{% url "n_abokado_today" as abokado_today %}
+{% url "n_abokado_tomorrow" as abokado_tomorrow %}
+{% url "n_apostrophe_today" as apostrophe_today %}
+{% url "n_benugo_today" as benugo_today %}
+{% url "n_leon_today" as leon_today %}
+{% url "n_nusa_today" as nusa_today %}
+{% url "n_pure_today" as pure_today %}
+{% url "n_pure_tomorrow" as pure_tomorrow %}
+{% url "n_tossed_today" as tossed_today %}
+{% url "n_tossed_tomorrow" as tossed_tomorrow %}
+{% url "n_pages_about" as pages_about %}
 
 <nav id="primary">
     <a{% active request pret_today %} href="{{ pret_today }}" title="Pret Today">Pret Today</a> |
