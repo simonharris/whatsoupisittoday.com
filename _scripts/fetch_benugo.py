@@ -32,6 +32,16 @@ shops = json.load(open(mypath + "/../_data/shops_benugo.json"))
 
 #pprint(shops)
 
+def is_soup(item):
+	if ("SOUP" in item):
+		return True
+	if ("BROTH" in item):
+		return True
+	if ("TOM YUM GAI" in item):
+		return True
+	return False
+
+
 for shop in shops:
 
 	shopurl = soupurl + shop['key']
@@ -45,7 +55,7 @@ for shop in shops:
 		elements = doc.xpath("//span[@class='special-title']")
 		pprint(elements)
 
-		roughlist = [elem.text for elem in elements if ("SOUP" in elem.text)]
+		roughlist = [elem.text for elem in elements if (is_soup(elem.text))]
 		roughlist = map(fix_text, roughlist)
 
 	# e.g. 404
