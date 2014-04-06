@@ -8,5 +8,6 @@
     {"key": "luton-airport",            "name": "Luton Airport"},
     {"key": "st-pancras-international", "name": "St. Pancras International"},
     {"key": "victoria",                 "name": "Victoria"},
-    {"key": "waterloo-station",         "name": "Waterloo Station"}
+    {"key": "waterloo-station",         "name": "Waterloo Station"},
+    {"key": "wigmore-street",           "name": "Wigmore Street"}
 ]
