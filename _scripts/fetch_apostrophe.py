@@ -2,11 +2,11 @@ from lxml.html import parse
 from pprint import pprint
 import pickle
 import json
-import os 
+import os
 
 
 """
-Fetch this today's soup from Apostrophe's website
+Fetch today's soup from Apostrophe's website
 
 Run: daily
 """
