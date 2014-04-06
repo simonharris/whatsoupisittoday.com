@@ -1,9 +1,7 @@
+from lxml.html import parse
 from pprint import pprint
 import pickle
 import re
-import urllib2
-import json 
-
 
 """
 Fetch this week's soup from Leon's website
@@ -12,27 +10,26 @@ Run: daily, early morning
 """
 
 outfile = '/tmp/leon.pkl'
-soupurl = 'http://www.leonrestaurants.co.uk/_js/menu.php' 
-
+soupurl = 'http://leonrestaurants.co.uk/menu/all-day/'
 
 def fix_text(astr) :
-	#astr = astr.strip()
-	#astr = astr.replace('has nuts in it', '')
-	#astr = re.sub('/NEW /', '', astr)
-	#astr = re.sub('/ - Back by popular demand!$/', '', astr);
-	astr = astr.strip()
+	astr = astr.replace(' Soup', '').strip()
 	return astr
 
 
-js = urllib2.urlopen(soupurl).read()
+def is_soup(item):
+	if ("Soup" in item):
+		return True
+	return False
 
-# strip out non-JSON guff
-js = js.replace('window.InitData=', '')
-js = js.replace(';', '')
 
-data = json.loads(js)
+doc = parse(soupurl)
+elements = doc.xpath('//div[@class="more-info-wrapper"]/h1[@class="menu-item-title"]')
 
-souplist = [a['dish'] for a in data if a['sub_cat'] == 'SOUPS']
+roughlist = [elem.text for elem in elements if (is_soup(elem.text))]
+souplist = map(fix_text, roughlist)
+
+#pprint(souplist)
 
 output = open(outfile, 'wb')
 pickle.dump(souplist, output, -1)
