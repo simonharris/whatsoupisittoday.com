@@ -37,12 +37,15 @@ allsoups = map(fix_text, soupnames)
 #pprint(allsoups)
 
 souplist = [
-	[allsoups[0], allsoups[1], allsoups[2]],
-	[allsoups[3], allsoups[4], allsoups[5]],
-	[allsoups[6], allsoups[7], allsoups[8]],
-	[allsoups[9], allsoups[10], allsoups[11]],
-	[allsoups[12], allsoups[13], allsoups[14]],
+	[allsoups[0], allsoups[1]],
+	[allsoups[2], allsoups[3]],
+	[allsoups[4], allsoups[5]],
+	[allsoups[6], allsoups[7]],
+	[allsoups[8], allsoups[9]]
 ]
+
+pprint(souplist)
+
 
 output = open(outfile, 'wb')
 pickle.dump(souplist, output, -1)
