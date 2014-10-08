@@ -1,9 +1,9 @@
-from lxml.html import etree 
+from lxml.html import etree
 from pprint import pprint
 import pickle
 import re
 import urllib2
-from StringIO import StringIO 
+from StringIO import StringIO
 
 
 """
@@ -37,11 +37,11 @@ allsoups = map(fix_text, soupnames)
 #pprint(allsoups)
 
 souplist = [
-	[allsoups[0], allsoups[1]],
-	[allsoups[2], allsoups[3]],
-	[allsoups[4], allsoups[5]],
-	[allsoups[6], allsoups[7]],
-	[allsoups[8], allsoups[9]]
+	[allsoups[0], allsoups[1], allsoups[2]],
+	[allsoups[3], allsoups[4], allsoups[5]],
+	[allsoups[6], allsoups[7], allsoups[8]],
+	[allsoups[9], allsoups[10], allsoups[11]],
+	[allsoups[12], allsoups[13], allsoups[14]]
 ]
 
 pprint(souplist)
